@@ -4,7 +4,7 @@ const validator = (event) => {
     event.preventDefault();
 
     const { email, password } = event.target.elements;
-    if (email.value === '' || password.value.length === '') {
+    if (email.value === '' || password.value.length === 0) {
         return alert("fill all the forms please");
 }
 
