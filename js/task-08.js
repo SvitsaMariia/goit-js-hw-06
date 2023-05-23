@@ -1,11 +1,19 @@
 const form = document.querySelector(".login-form")
-const input = document.querySelector("input")
 
 const validator = (event) => {
     event.preventDefault();
-    if (input.value === '') {
-        alert("fill all the forms please")
-    }
+
+    const { email, password } = event.target.elements;
+    if (email.value === '' || password.value.length === '') {
+        return alert("fill all the forms please");
 }
 
-form.addEventListener('submit', validator)
+console.log({
+    email: email.value,
+    password: password.value,
+});
+ event.target.reset(); 
+};
+
+form.addEventListener('submit', validator);
+
